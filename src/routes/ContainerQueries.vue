@@ -15,32 +15,30 @@
         <img src="https://via.placeholder.com/300" alt="" />
       </article>
     </div>
-    <p class="supports-not">
-      Your browser does not support container queries. :(
-    </p>
+    <p class="hidden">Your browser does not support container queries. :(</p>
   </section>
 </template>
 
-<style>
+<style scoped>
 #container-queries {
   container: inline-size;
   container-name: card-container;
 }
 
 #container-queries h2 {
-  margin-block-end: 1rem;
+  margin-block-end: var(--spacing-base);
 }
 
 .cards {
   display: grid;
-  gap: 1rem;
+  gap: var(--spacing-base);
   text-align: center;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: var(--spacing-sm);
 }
 
 @container card-container (width > 20em) {

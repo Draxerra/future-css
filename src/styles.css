@@ -10,7 +10,19 @@ body {
     min-height: 100dvh;
 }
 
+:root {
+    --container: 75rem;
+
+    --spacing-sm: 0.5rem;
+    --spacing-base: 1rem;
+    --spacing-lg: 2rem;
+}
+
 img {
     display: block;
     max-width: 100%;
+}
+
+.hidden {
+    display: none;
 }

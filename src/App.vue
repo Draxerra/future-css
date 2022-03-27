@@ -3,12 +3,9 @@
     <header>
       <nav>
         <ul>
-          <li>
-            <router-link to="/">Home</router-link>
-          </li>
-          <li>
-            <router-link to="/container-queries">Container Queries</router-link>
-          </li>
+          <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/container">Container Queries</router-link></li>
+          <li><router-link to="/subgrid">Subgrid</router-link></li>
         </ul>
       </nav>
     </header>
@@ -21,19 +18,20 @@
 
 <style>
 .content-wrapper {
-  max-inline-size: 75rem;
+  max-inline-size: var(--container);
   margin-inline: auto;
-  padding: 1rem;
+  padding: var(--spacing-base);
 }
 
 header {
-  padding-block: 1rem;
+  padding-block: var(--spacing-base);
 }
 
 nav ul {
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
-  gap: 1rem;
+  gap: var(--spacing-sm) var(--spacing-base);
 }
 
 nav a {
@@ -41,6 +39,6 @@ nav a {
 }
 
 h1 {
-  margin-block-end: 2rem;
+  margin-block-end: var(--spacing-lg);
 }
 </style>
