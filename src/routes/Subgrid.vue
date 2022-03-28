@@ -1,8 +1,10 @@
 <template>
   <section id="subgrid" aria-labelledby="subgrid-header">
     <h2 id="subgrid-header">{{ subgrid ? "Subgrid" : "Without Subgrid" }}</h2>
-    <button class="subgrid-toggle" @click="toggle">Toggle Subgrid</button>
-    <div class="cards">
+    <button class="subgrid-toggle supported" @click="toggle">
+      Toggle Subgrid
+    </button>
+    <div class="cards supported">
       <article class="card" :class="{ 'with-subgrid': subgrid }">
         <h3>Card 1</h3>
         <p>
@@ -34,7 +36,7 @@
         <img src="https://via.placeholder.com/300" alt="" />
       </article>
     </div>
-    <p class="hidden">Your browser does not support subgrid. :(</p>
+    <p class="not-supported">Your browser does not support subgrid. :(</p>
   </section>
 </template>
 
@@ -47,10 +49,6 @@ function toggle() {
 </script>
 
 <style scoped>
-#subgrid > * + * {
-  margin-top: var(--spacing-base);
-}
-
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
@@ -74,11 +72,10 @@ function toggle() {
 }
 
 @supports not (grid-template-rows: subgrid) {
-  .cards,
-  .subgrid-toggle {
+  .supported {
     display: none;
   }
-  .hidden {
+  .not-supported {
     display: revert;
   }
 }

@@ -23,6 +23,10 @@ img {
     max-width: 100%;
 }
 
-.hidden {
+section>*+* {
+    margin-block-start: var(--spacing-base);
+}
+
+.not-supported {
     display: none;
 }

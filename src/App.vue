@@ -5,6 +5,7 @@
         <ul>
           <li><router-link to="/">Home</router-link></li>
           <li><router-link to="/container">Container Queries</router-link></li>
+          <li><router-link to="/has">Parent Selector</router-link></li>
           <li><router-link to="/subgrid">Subgrid</router-link></li>
         </ul>
       </nav>

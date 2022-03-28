@@ -1,7 +1,7 @@
 <template>
   <section id="container-queries" aria-labelledby="container-query-heading">
     <h2 id="container-query-heading">Container Queries</h2>
-    <div class="cards">
+    <div class="cards supported">
       <article class="card">
         <h3>Card 1</h3>
         <img src="https://via.placeholder.com/300" alt="" />
@@ -15,7 +15,9 @@
         <img src="https://via.placeholder.com/300" alt="" />
       </article>
     </div>
-    <p class="hidden">Your browser does not support container queries. :(</p>
+    <p class="not-supported">
+      Your browser does not support container queries. :(
+    </p>
   </section>
 </template>
 
@@ -23,10 +25,6 @@
 #container-queries {
   container: inline-size;
   container-name: card-container;
-}
-
-#container-queries h2 {
-  margin-block-end: var(--spacing-base);
 }
 
 .cards {
@@ -54,16 +52,12 @@
   }
 }
 
-.supports-not {
-  display: none;
-}
-
 @supports not (container: inline-size) {
-  .supports-not {
-    display: revert;
-  }
-  .cards {
+  .supported {
     display: none;
+  }
+  .not-supported {
+    display: revert;
   }
 }
 </style>
