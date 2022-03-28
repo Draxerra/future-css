@@ -20,6 +20,7 @@
 </template>
 
 <style scoped>
+@layer base, components;
 @layer base {
   .layer span.text {
     color: red;
