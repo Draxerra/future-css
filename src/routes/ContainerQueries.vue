@@ -3,15 +3,15 @@
     <h2 id="container-query-heading">Container Queries</h2>
     <div class="cards supported">
       <article class="card">
-        <h3>Card 1</h3>
+        <h3 class="card__header">Card 1</h3>
         <img src="https://via.placeholder.com/300" alt="" />
       </article>
       <article class="card">
-        <h3>Card 2</h3>
+        <h3 class="card__header">Card 2</h3>
         <img src="https://via.placeholder.com/300" alt="" />
       </article>
       <article class="card">
-        <h3>Card 3</h3>
+        <h3 class="card__header">Card 3</h3>
         <img src="https://via.placeholder.com/300" alt="" />
       </article>
     </div>
@@ -37,6 +37,10 @@
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+}
+
+.card__header {
+  font-size: clamp(1.125rem, 3cqi, 1.375rem);
 }
 
 @container card-container (width > 20em) {
