@@ -4,6 +4,7 @@
       <nav>
         <ul>
           <li><router-link to="/">Home</router-link></li>
+          <li><router-link to="/cascade">Cascade Layers</router-link></li>
           <li><router-link to="/colors">Color Functions</router-link></li>
           <li><router-link to="/container">Container Queries</router-link></li>
           <li><router-link to="/has">Parent Selector</router-link></li>

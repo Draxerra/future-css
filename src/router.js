@@ -1,6 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "./routes/Home.vue";
+import CascadeLayers from "./routes/CascadeLayers.vue";
 import ColorFunctions from "./routes/ColorFunctions.vue";
 import ContainerQueries from "./routes/ContainerQueries.vue";
 import Has from "./routes/Has.vue";
@@ -9,6 +10,7 @@ import Subgrid from "./routes/Subgrid.vue";
 
 const routes = [
   { path: "/", component: Home },
+  { path: "/cascade", component: CascadeLayers },
   { path: "/colors", component: ColorFunctions },
   { path: "/container", component: ContainerQueries },
   { path: "/lab", component: Lab },
