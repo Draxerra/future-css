@@ -1,7 +1,7 @@
 <template>
   <section id="cascade-layers" aria-labelledby="cascade-layers-header">
     <h2>Cascade Layers</h2>
-    <div class="layer">
+    <div class="layer supported">
       <span class="text">
         Blue text wins because the second layer has higher specificity.
       </span>
