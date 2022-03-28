@@ -131,11 +131,9 @@ article > * + * {
   --color: rgb(from orange calc(r - 100%) g b);
 }
 
-@supports not (
-  color: color-mix(in lch, purple, plum) and
-    (
-      color: color-contrast(black vs white),
-    )
+@supports not( 
+  (color: color-mix(in lch, purple, plum)) and
+    (color: color-contrast(black vs white)
 ) {
   .supported {
     display: none;
